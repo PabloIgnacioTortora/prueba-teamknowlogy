@@ -24,7 +24,7 @@ app.use((req, res, next) => {
 });
 
 // Carpeta estatica de archivos minificados
-app.use(express.static(path.join(__dirname, "client/dist/prueba")));
+app.use(express.static(path.join(__dirname, "dist")));
 
 // RUTAS
 app.use("/api", adn_routes);
@@ -34,7 +34,7 @@ app.get("/", (req, res) => {
 });
 
 app.get("*", (req, res) => {
-  res.sendFile(path.join(__dirname, "client/dist/prueba/index.html"));
+  res.sendFile(path.join(__dirname, "dist/index.html"));
 });
 
 
