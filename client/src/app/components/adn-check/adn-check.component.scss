@@ -1,0 +1,20 @@
+.contact-card {
+  width: fit-content;
+  display: grid;
+  margin: 0 auto;
+  grid-template-columns: auto auto;
+  grid-template-areas:
+    " img form"
+    "map map";
+}
+
+.form {
+  grid-area: form;
+  display: grid;
+  grid-template-areas: 
+  "name email phone"
+  "time city city"
+  "message message message"
+  ;
+  column-gap: 20px;
+}

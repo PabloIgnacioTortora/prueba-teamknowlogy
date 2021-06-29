@@ -1,0 +1,35 @@
+<mat-card class="contact-card">
+  <div class="contact-form">
+    <form
+      novalidate
+      class="form"
+      [formGroup]="ADNSecuense"
+      (ngSubmit)="onSubmit()"
+    >
+      <div *ngFor="let control of ADNSecuense.controls; index as i">
+        <mat-form-field class="dna" appearance="outline" focused>
+          <mat-label>dna_{{ i + 1 }}</mat-label>
+          <input
+            matInput
+            type="text"
+            [formControl]="ADNSecuense.controls[i]"
+            required
+          />
+        </mat-form-field>
+        <mat-hint *ngIf="this.ADNSecuense.errors?.required">
+          (El dna no puede quedar vacío)
+        </mat-hint>
+        <mat-hint *ngIf="this.ADNSecuense.errors?.minlength">
+          (Debe tener como mínimo 6 caracteres)
+        </mat-hint>
+      </div>
+      <button
+        mat-raised-button
+        type="submit"
+        [disabled]="!this.ADNSecuense.valid"
+      >
+        Verificar
+      </button>
+    </form>
+  </div>
+</mat-card>
