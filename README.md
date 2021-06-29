@@ -22,3 +22,10 @@ ng build (para construir la carpeta dist donde que va a renderizar el server)
 ng serve (levantar el cliente) 
 
 puerto localhost:4200
+
+
+## Proyecto deployado
+
+https://pruebateamknowlogy.herokuapp.com/
+
+https://pruebateamknowlogy.herokuapp.com/mutation
